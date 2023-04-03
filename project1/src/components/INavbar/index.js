@@ -15,7 +15,8 @@ import AdbIcon from '@mui/icons-material/Adb';
 import {Link} from 'react-router-dom'
 import Face2Icon from '@mui/icons-material/Face2';
 
-const pages = ['Aboutme', 'Qualification',  'Skills','Certifications','Experience','Hobbies','Projects', 'Contact Me'];
+
+const pages = ['Aboutme', 'Qualification',  'Skills','Certifications','Experience','Hobbies','Projects','Workshops','Contact Me'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function INavbar() {
@@ -134,7 +135,9 @@ function INavbar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Bhavani" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="BHAVANI" src="/static/images/avatar/2.jpg" />
+                
+               
               </IconButton>
             </Tooltip>
             <Menu

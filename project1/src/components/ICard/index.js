@@ -14,7 +14,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import a from '../../assets/photo.jpeg'; 
+import a from '../../assets/photo.jpeg.jpg'; 
 import EngineeringIcon from '@mui/icons-material/Engineering';
 
 const ExpandMore = styled((props) => {
@@ -36,7 +36,7 @@ export default function ICard() {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 600 }}>
       {/* <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -53,7 +53,7 @@ export default function ICard() {
       /> */}
       <CardMedia
         component="img"
-        height="194"
+        height="400"
         image={a}
         alt="Paella dish"
       />
