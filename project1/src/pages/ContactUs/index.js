@@ -12,6 +12,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {useState,useEffect} from 'react';
+import axios from 'axios';
 
 function Copyright(props) {
   return (
@@ -29,6 +31,19 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function ContactUs() {
+  const [loader,setLoader] = useState(true);
+    const [aboutme,setContactus] = useState(null);
+
+    const connectToServer = async  () => axios.get('http://localhost:8000/Contactus')
+                                            .then(res=>{
+                                        
+                                                console.log(res.data);
+                                                setContactus(res.data);
+                                                setLoader(false)
+                                            }).catch(err=>console.log(err))
+useEffect(()=>{
+   connectToServer();
+},[])
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
